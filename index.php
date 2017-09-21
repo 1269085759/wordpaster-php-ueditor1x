@@ -25,6 +25,11 @@
 		
 		 UE.getEditor('myEditor',{onready:function(){//创建一个编辑器实例
 		     pasterMgr.SetEditor(this);
+			 
+			 //WordPaster快捷键 Ctrl + V
+		     this.addshortcutkey({
+		         "wordpaster": "ctrl+86"
+		     });
 		 }});
 	</script>
 </body>
