@@ -19,7 +19,7 @@
 	<textarea name="后台取值的key" id="myEditor">这里写你的初始化内容</textarea>
 	<script type="text/javascript">
         var pasterMgr = new WordPasterManager();
-    	pasterMgr.Config["PostUrl"] = "http://localhost:81/WordPaster2/WordPasterUEditor1x/php/upload.php"
+    	pasterMgr.Config["PostUrl"] = "http://localhost:811/WordPaster2/ueditor1x/php/upload.php"
 		pasterMgr.Config["Cookie"] = 'PHPSESSID=<?php echo session_id() ?>';
     	pasterMgr.Load();//加载控件
 		
