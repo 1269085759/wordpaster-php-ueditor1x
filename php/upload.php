@@ -5,7 +5,7 @@ $timeDir = date("Ym")."/".date("d");
 $uploadDir = dirname(__FILE__).'/upload/'.$timeDir;
 $curDomain = "http://".$_SERVER["HTTP_HOST"]."/";
 //相对路径 http://www.ncmem.com/upload/2012-1-10/
-$relatPath = $curDomain ."WordPaster2/WordPasterUEditor1x/php/upload/" . $timeDir . "/";
+$relatPath = $curDomain ."WordPaster2/ueditor1x/php/upload/" . $timeDir . "/";
 
 //自动创建目录。upload/2012-1-10
 if(!is_dir($uploadDir))
