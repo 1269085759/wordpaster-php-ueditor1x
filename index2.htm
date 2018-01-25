@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;"/>
+	<title>编辑器完整版实例-1.2.6.0</title>
+	<script type="text/javascript" src="ueditor.config.js"></script>
+	<script type="text/javascript" src="ueditor.all.js" ></script>
+	<link type="text/css" rel="Stylesheet" href="WordPaster/WordPaster.css"/>
+    <link type="text/css" rel="stylesheet" href="WordPaster/js/skygqbox.css" />
+    <script type="text/javascript" src="WordPaster/js/jquery-1.4.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="WordPaster/js/skygqbox.js" charset="utf-8"></script>
+	<script type="text/javascript" src="WordPaster/js/w.edge.js" charset="utf-8"></script>
+    <script type="text/javascript" src="WordPaster/js/w.app.js" charset="utf-8"></script>
+    <script type="text/javascript" src="WordPaster/js/w.file.js" charset="utf-8"></script>
+    <script type="text/javascript" src="WordPaster/js/WordPaster.js" charset="utf-8"></script>
+</head>
+<body>
+	<textarea name="后台取值的key" id="myEditor">这里写你的初始化内容</textarea>
+	<br/><div>编辑器2：</div>
+	<textarea name="后台取值的key" id="myEditor2">这里写你的初始化内容</textarea>
+	<script type="text/javascript">
+    	var pasterMgr = new WordPasterManager();
+    	pasterMgr.Config["PostUrl"] = "http://localhost:81/WordPaster2/WordPasterUEditor1x/php/upload.php"
+    	//pasterMgr.Config["PostUrl"] = "http://cloud.dyso.cn/ueditor/upload.jsp"
+    	pasterMgr.Load();//加载控件
+
+		 var editor1 = new baidu.editor.ui.Editor();
+		 editor1.render( 'myEditor' ); 
+		 editor1.ready(function(edt){pasterMgr.SetEditor(edt);});
+		 editor1.addListener("focus",function(){pasterMgr.SetEditor(editor1);});
+		 
+		 
+		 var editor2 = new baidu.editor.ui.Editor();
+		 editor2.render( 'myEditor2' ); 
+		 editor2.addListener("focus",function(){pasterMgr.SetEditor(editor2);});
+	</script>
+</body>
+</html>
